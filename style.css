@@ -1,0 +1,39 @@
+/* Custom background color for the navbar */
+.my-custom-nav {
+    background-color: #44586b !important; /* Matches your chosen blue tone */
+}
+
+/* Forces image heights in grids to match */
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Controls company carousel banner image scale */
+.carousel-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Forces carousel navigation arrows & dashes to be highly visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100%) brightness(20%) !important;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #000 !important;
+}
+/* Makes the main category panels look clickable and dynamic */
+.cp-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.cp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15) !important;
+}
+/* Custom height handling for main category preview covers */
+.category-img {
+    height: 240px !important;
+    object-fit: cover;
+}
