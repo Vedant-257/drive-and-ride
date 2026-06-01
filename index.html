@@ -3,291 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drive & Ride | Premium Vehicle Rentals</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <title>Drive & Ride Rentals</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <img src="./logo.png" alt="Drive and Ride Logo" height="40" class="d-inline-block align-top rounded">
-                <span class="fw-bold text-warning fs-3">Drive&Ride</span>
+    <nav class="navbar navbar-expand-lg navbar-light my-custom-nav border-bottom py-2">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center m-0" href="#">
+                <img src="logo.png" alt="Drive and Ride Logo" class="me-2" style="height: 40px; width: auto; object-fit: contain;">
+                <span class="fw-bold text-warning fs-4">Drive&Ride</span>
             </a>
-            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-                <div class="navbar-nav d-flex flex-row align-items-center gap-2 mt-3 mt-lg-0">
-                    <a class="nav-link btn btn-warning fw-bold text-dark px-3 py-1 rounded-pill" href="#">Home</a>
-                    <a class="nav-link btn btn-outline-light fw-semibold text-white px-3 py-1 rounded-pill" href="#cars">Cars</a>
-                    <a class="nav-link btn btn-outline-light fw-semibold text-white px-3 py-1 rounded-pill" href="#bikes">Bikes</a>
-                    <a class="nav-link btn btn-success fw-bold text-white px-3 py-1 rounded-pill" href="#group-travel">Group & Touring 🚐</a>
-                </div>
-            </div>
+    <div class="navbar-nav d-flex flex-row align-items-center gap-2">
+        <a class="nav-link btn btn-warning fw-bold text-white px-3 py-1 rounded-pill" href="#">Home</a>
+        <a class="nav-link btn btn-success fw-semibold text-white px-3 py-1 rounded-pill" href="#cars">Cars</a>
+        <a class="nav-link btn btn-success-light fw-semibold text-white px-3 py-1 rounded-pill" href="#bikes">Bikes</a>
+        <a class="nav-link btn btn-success fw-bold text-white px-3 py-1 rounded-pill" href="#group-travel">Group & Touring </a>
+    </div>
         </div>
     </nav>
 
-    <header id="heroBanner" class="container my-4">
-        <div id="vehicleHeroCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#vehicleHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#vehicleHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#vehicleHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <header class="bg-white text-center pt-5 pb-4">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-dark">Premium Cars & Bikes For Rent</h1>
+            <p class="lead text-muted">Affordable rides for your next road trip, daily commute, or weekend getaway.</p>
+            <div class="gap-2 d-sm-flex justify-content-sm-center mb-2">
+                <a href="#cars" class="btn btn-secondary btn-lg px-4 gap-3 fw-bold">Explore Cars</a>
+                <a href="#bikes" class="btn btn-warning btn-lg px-4">Explore Bikes</a>
             </div>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        <div id="companyCarousel" class="carousel slide shadow border rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="4000">
             
-            <div class="carousel-inner" style="max-height: 500px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#companyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#companyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#companyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./carousel-about.jpg" class="d-block w-100 object-fit-cover" alt="About Drive & Ride Section Banner" style="height: 500px; filter: brightness(65%);">
-                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                        <div class="bg-dark bg-opacity-70 p-4 rounded shadow-sm mx-auto style-card" style="max-width: 750px;">
-                            <h1 class="display-5 fw-bold text-warning mb-2">Who We Are</h1>
-                            <p class="lead text-white fs-5">Drive&Ride is India's leading vehicle rental platform, offering verified vehicles, zero hidden costs, and 24/7 roadside assistance support across local corridors.</p>
-                            <div class="d-flex justify-content-center gap-3 mt-3">
-                                <a href="#cars" class="btn btn-secondary btn-lg px-4 fw-bold shadow-sm">Explore Cars</a>
-                                <a href="#bikes" class="btn btn-warning btn-lg px-4 fw-bold shadow-sm text-dark">Explore Bikes</a>
-                            </div>
-                        </div>
+                    <img src="carousel-fleet.jpg" class="d-block w-100 carousel-img" alt="Our Premium Fleet">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h3 class="fw-bold text-warning">Our Premium Fleet</h3>
+                        <p>From sleek luxury sedans to rugged off-road adventure bikes, we have the perfect ride for every journey.</p>
                     </div>
                 </div>
-
                 <div class="carousel-item">
-                    <img src="./carousel-fleet.jpg" class="d-block w-100 object-fit-cover" alt="Premium Fleet Lineup Banner" style="height: 500px; filter: brightness(60%);">
-                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                        <div class="bg-dark bg-opacity-70 p-4 rounded shadow-sm mx-auto style-card" style="max-width: 650px;">
-                            <h2 class="display-5 fw-bold text-warning mb-2">Our Premium Fleet</h2>
-                            <p class="lead text-white fs-5">From sleek city runabouts and luxury executive sedans to rugged off-road terrains and high-performance cross-country cruisers, we have it all.</p>
-                        </div>
+                    <img src="carousel-about.jpg" class="d-block w-100 carousel-img" alt="About Drive & Ride">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h3 class="fw-bold text-warning">Who We Are</h3>
+                        <p>Drive&Ride is India's leading vehicle rental platform, offering verified vehicles, zero hidden costs, and 24/7 roadside assistance.</p>
                     </div>
                 </div>
-
                 <div class="carousel-item">
-                    <img src="./carousel-safe.jpg" class="d-block w-100 object-fit-cover" alt="Safe and Verified Travel Protections" style="height: 500px; filter: brightness(60%);">
-                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                        <div class="bg-dark bg-opacity-70 p-4 rounded shadow-sm mx-auto style-card" style="max-width: 650px;">
-                            <h2 class="display-5 fw-bold text-success mb-2">Safe & Fully Insured</h2>
-                            <p class="lead text-white fs-5">Every single model undergoes multi-point vehicle diagnostic evaluations and comes complete with zero-deductible roadside comprehensive coverage.</p>
-                        </div>
+                    <img src="carousel-safe.jpg" class="d-block w-100 carousel-img" alt="Safe and Insured Rides">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h3 class="fw-bold text-warning">Drive with Peace of Mind</h3>
+                        <p>Every single car and bike in our garage undergoes a rigorous 50-point safety check and comes fully insured.</p>
                     </div>
                 </div>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#vehicleHeroCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#companyCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#vehicleHeroCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#companyCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </header>
+    </div>
 
-    <main class="container my-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold display-6 text-dark m-0">Explore Our Fleet Portfolio</h2>
-            <p class="text-muted fs-5 mt-1">Select a core category ecosystem underneath to filter available active listings</p>
+<section id="cars" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-2">Explore Our Car Fleet</h2>
+        <p class="text-center text-muted mb-5">Click on a vehicle category below to view available models</p>
+
+        <div class="row g-4 mb-5 justify-content-center">
+
+            <div class="col-md-5">
+                <div class="card h-100 shadow-sm border-warning overflow-hidden cp-card" 
+                     data-bs-toggle="collapse" data-bs-target="#sedanShowroom" 
+                     aria-expanded="false" aria-controls="sedanShowroom"
+                     onclick="toggleShowroom('sedanShowroom')">
+                    <img src="category-sedan.jpg" class="card-img-top category-img" alt="Browse Sedans">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title fw-bold text-dark">Sedans</h4>
+                        <p class="card-text text-muted small mb-0">Premium comfort, executive looks, and smooth highway cruising.</p>
+                        <span class="badge bg-warning text-dark mt-3 px-3 py-2">Click to View Models</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card h-100 shadow-sm border-warning overflow-hidden cp-card" 
+                     data-bs-toggle="collapse" data-bs-target="#suvShowroom" 
+                     aria-expanded="false" aria-controls="suvShowroom"
+                     onclick="toggleShowroom('suvShowroom')">
+                    <img src="category-suv.jpg" class="card-img-top category-img" alt="Browse SUVs">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title fw-bold text-dark">SUVs</h4>
+                        <p class="card-text text-muted small mb-0">Massive ground clearance, extra seating, and rugged capabilities.</p>
+                        <span class="badge bg-warning text-dark mt-3 px-3 py-2">Click to View Models</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <section id="cars" class="mb-5">
-            <div class="card border-0 shadow-sm overflow-hidden mb-4">
-                <div class="row g-0 align-items-center bg-white">
-                    <div class="col-md-5">
-                        <img src="./category-sedan.jpg" class="img-fluid w-100 object-fit-cover" alt="Sedan Category Showroom" style="min-height: 250px;">
-                    </div>
-                    <div class="col-md-7 p-4 p-lg-5">
-                        <span class="badge bg-warning text-dark fw-bold mb-2 px-3 py-2 uppercase tracking-wide">Premium Cars</span>
-                        <h3 class="fw-bold text-dark display-6 mb-3">Sedans & Compact Hatchbacks</h3>
-                        <p class="text-secondary fs-5">Perfect variants handling heavy metro traffic density operations with optimized fuel efficiencies, responsive automatic handling setups, and premium passenger interior comforts.</p>
-                        <button class="btn btn-dark btn-lg fw-semibold px-4 mt-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#sedanShowroomGrid" aria-expanded="false" aria-controls="sedanShowroomGrid">
-                            View Available Models 👇
-                        </button>
-                    </div>
+        <div class="collapse multi-collapse" id="sedanShowroom">
+            <div class="card card-body bg-white border-0 shadow-sm rounded-3 p-4 mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+                    <h3 class="fw-bold text-dark m-0">Available Sedan Models</h3>
+                    <span class="text-muted fw-semibold">4 Models Found</span>
                 </div>
-            </div>
+                
+                <div class="row g-4">
 
-            <div class="collapse" id="sedanShowroomGrid">
-                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 border-top border-warning border-3 overflow-hidden style-card">
-                            <img src="./sedan-dzire.jpg" class="card-img-top object-fit-cover" alt="Maruti Swift Dzire Sedan Model" style="height: 200px;">
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-dark fs-4">Maruti Swift Dzire</h5>
-                                <p class="card-text text-muted">Highly efficient 5-seater configurations perfect for extended intra-city travels or airport multi-luggage transport operations.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-light">
-                                    <span class="text-dark fw-bold fs-4">₹1,800 <small class="text-muted fs-6 fw-normal">/ day</small></span>
-                                    <button class="btn btn-warning fw-bold text-dark px-3 shadow-sm" onclick="triggerBooking('Maruti Swift Dzire', '₹1,800')">Rent Now</button>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="sedan-dzire.jpg" class="card-img-top" alt="Maruti Suzuki Swift Dzire">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">Swift Dzire</h5>
+                                <span class="badge bg-light text-success border border-success mb-2">Best Mileage</span>
+                                <p class="card-text text-muted small">Highly reliable, ultra fuel-efficient, excellent for practical inner-city transit.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹1,800 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Maruti Suzuki Swift Dzire" data-price="₹1,800">Rent Now</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 border-top border-warning border-3 overflow-hidden style-card">
-                            <img src="./sedan-honda.jpg" class="card-img-top object-fit-cover" alt="Honda City Executive Sedan Model" style="height: 200px;">
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-dark fs-4">Honda City</h5>
-                                <p class="card-text text-muted">Premium executive handling configurations fitted with leather upholstery, sunroof mechanics, and high-tier cruise driving controls.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-light">
-                                    <span class="text-dark fw-bold fs-4">₹2,500 <small class="text-muted fs-6 fw-normal">/ day</small></span>
-                                    <button class="btn btn-warning fw-bold text-dark px-3 shadow-sm" onclick="triggerBooking('Honda City', '₹2,500')">Rent Now</button>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="sedan-honda.jpg" class="card-img-top" alt="Honda City">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">Honda City</h5>
+                                <span class="badge bg-light text-primary border border-primary mb-2">Comfort King</span>
+                                <p class="card-text text-muted small">i-VTEC engine performance, spacious premium cabin, luxury rear-seat legroom.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹2,500 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Honda City" data-price="₹2,500">Rent Now</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 border-top border-warning border-3 overflow-hidden style-card">
-                            <img src="./sedan-bmw.jpg" class="card-img-top object-fit-cover" alt="BMW Premium Sport Sedan Sedan Model" style="height: 200px;">
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-dark fs-4">BMW 3 Series</h5>
-                                <p class="card-text text-muted">Luxury sports executive dynamic builds. Engineered with absolute high-performance power modules for corporate travel profiles.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-light">
-                                    <span class="text-dark fw-bold fs-4">₹8,500 <small class="text-muted fs-6 fw-normal">/ day</small></span>
-                                    <button class="btn btn-warning fw-bold text-dark px-3 shadow-sm" onclick="triggerBooking('BMW 3 Series', '₹8,500')">Rent Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-0 shadow-sm overflow-hidden mb-4 mt-5">
-                <div class="row g-0 align-items-center bg-white">
-                    <div class="col-md-5 order-md-2">
-                        <img src="./category-suv.jpg" class="img-fluid w-100 object-fit-cover" alt="Rugged SUV Category Showroom" style="min-height: 250px;">
-                    </div>
-                    <div class="col-md-7 p-4 p-lg-5 order-md-1">
-                        <span class="badge bg-success text-white fw-bold mb-2 px-3 py-2 uppercase tracking-wide">Sports Utility Vehicles</span>
-                        <h3 class="fw-bold text-dark display-6 mb-3">Rugged All-Terrain SUVs</h3>
-                        <p class="text-secondary fs-5">High ground-clearance powertrains crafted explicitly to mitigate rough off-road elevation profiles and sustain complex outstation group family cross-corridors safely.</p>
-                        <button class="btn btn-dark btn-lg fw-semibold px-4 mt-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#suvShowroomGrid" aria-expanded="false" aria-controls="suvShowroomGrid">
-                            View Available Models 👇
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collapse" id="suvShowroomGrid">
-                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 border-top border-success border-3 overflow-hidden style-card">
-                            <img src="./suv-thar.jpg" class="card-img-top object-fit-cover" alt="Mahindra Thar 4x4 Offroad Model" style="height: 200px;">
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-dark fs-4">Mahindra Thar (4x4)</h5>
-                                <p class="card-text text-muted">The definitive iconic off-road adventure beast. Features heavy-duty differential low-range locking gears and high clearance mapping.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-light">
-                                    <span class="text-dark fw-bold fs-4">₹3,500 <small class="text-muted fs-6 fw-normal">/ day</small></span>
-                                    <button class="btn btn-success fw-bold text-white px-3 shadow-sm" onclick="triggerBooking('Mahindra Thar 4x4', '₹3,500')">Rent Now</button>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="sedan-verna.jpg" class="card-img-top" alt="Hyundai Verna">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">Hyundai Verna</h5>
+                                <span class="badge bg-light text-danger border border-danger mb-2">Turbo Sport</span>
+                                <p class="card-text text-muted small">Futuristic tech cockpit, aggressive styling, fast aerodynamic road handling.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹2,800 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Hyundai Verna" data-price="₹2,800">Rent Now</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 border-top border-success border-3 overflow-hidden style-card">
-                            <img src="./suv-fortuner.jpg" class="card-img-top object-fit-cover" alt="Toyota Fortuner Premium SUV Model" style="height: 200px;">
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-dark fs-4">Toyota Fortuner</h5>
-                                <p class="card-text text-muted">Massive road presence combined with ultimate bulletproof structural reliability. Complete 7-seater premium leather row configuration.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-light">
-                                    <span class="text-dark fw-bold fs-4">₹6,000 <small class="text-muted fs-6 fw-normal">/ day</small></span>
-                                    <button class="btn btn-success fw-bold text-white px-3 shadow-sm" onclick="triggerBooking('Toyota Fortuner', '₹6,000')">Rent Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 border-top border-success border-3 overflow-hidden style-card">
-                            <img src="./suv-creta.jpg" class="card-img-top object-fit-cover" alt="Hyundai Creta Urban SUV Model" style="height: 200px;">
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-dark fs-4">Hyundai Creta</h5>
-                                <p class="card-text text-muted">Sleek, feature-packed smart urban cruiser built with smooth panoramic integrations and responsive driving aids.</p>
-                                <div class="d-flex justify-content-between align-items-center mt-4 pt-2 border-top border-light">
-                                    <span class="text-dark fw-bold fs-4">₹2,800 <small class="text-muted fs-6 fw-normal">/ day</small></span>
-                                    <button class="btn btn-success fw-bold text-white px-3 shadow-sm" onclick="triggerBooking('Hyundai Creta', '₹2,800')">Rent Now</button>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="sedan-bmw.jpg" class="card-img-top" alt="BMW 3 Series">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">BMW 3 Series</h5>
+                                <span class="badge bg-dark text-warning mb-2">Luxury Tier</span>
+                                <p class="card-text text-muted small">Ultimate driving machine, panoramic sunroof, sheer prestige and premium performance.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹7,500 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="BMW 3 Series Luxury" data-price="₹7,500">Rent Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
+
+        <!-- SUV MODEL GARAGE -->
+        <div class="collapse multi-collapse" id="suvShowroom">
+            <div class="card card-body bg-white border-0 shadow-sm rounded-3 p-4 mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+                    <h3 class="fw-bold text-dark m-0">Available SUV Models</h3>
+                    <span class="text-muted fw-semibold">3 Models Found</span>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Model 1: Mahindra Thar -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="suv-thar.jpg" class="card-img-top" alt="Mahindra Thar">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">Mahindra Thar 4x4</h5>
+                                <span class="badge bg-light text-dark border border-dark mb-2">Off-Road Icon</span>
+                                <p class="card-text text-muted small">Rugged build, removable soft top, built to dominate harsh terrain effortlessly.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹3,500 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Mahindra Thar 4x4" data-price="₹3,500">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 2: Scorpio-N -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="suv-scorpio.jpg" class="card-img-top" alt="Mahindra Scorpio-N">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">Scorpio-N</h5>
+                                <span class="badge bg-light text-secondary border border-secondary mb-2">Big Daddy SUV</span>
+                                <p class="card-text text-muted small">Massive road presence, comfortable 7-seater capacity, absolute command view.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹4,200 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Mahindra Scorpio-N" data-price="₹4,200">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 3: Toyota Fortuner -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border shadow-2xs">
+                            <img src="suv-fortuner.jpg" class="card-img-top" alt="Toyota Fortuner">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold text-dark mb-1">Toyota Fortuner</h5>
+                                <span class="badge bg-dark text-warning mb-2">VIP Class</span>
+                                <p class="card-text text-muted small">Bulletproof reliability, premium high-status transport for long VIP tours.</p>
+                                <h6 class="text-warning fw-bold mb-3">₹7,000 / day</h6>
+                                <button class="btn btn-dark w-100 fw-bold btn-sm" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Toyota Fortuner Elite" data-price="₹7,000">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="bikes" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Available Bikes</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="cruiser.jpg" class="card-img-top" alt="Cruiser Bike">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Cruiser Bike</h5>
+                            <p class="card-text text-muted">Heavy-duty cruiser designed for epic highway journeys.</p>
+                            <h6 class="text-warning fw-bold mb-3">₹1,200 / day</h6>
+                            <button class="btn btn-dark w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Cruiser Bike" data-price="₹1,200">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="adventure.jpg" class="card-img-top" alt="Adventure Bike">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Adventure Tourer</h5>
+                            <p class="card-text text-muted">Tall stance, long travel suspension for off-road trails.</p>
+                            <h6 class="text-warning fw-bold mb-3">₹1,500 / day</h6>
+                            <button class="btn btn-dark w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Adventure Tourer" data-price="₹1,500">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="scooter.jpg" class="card-img-top" alt="Urban Commuter">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Urban Commuter</h5>
+                            <p class="card-text text-muted">Lightweight, highly fuel-efficient ride for quick errands.</p>
+                            <h6 class="text-warning fw-bold mb-3">₹600 / day</h6>
+                            <button class="btn btn-dark w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Urban Commuter" data-price="₹600">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="group-travel" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-2">Group & Tour Rentals 🚐</h2>
+            <p class="text-center text-muted mb-4">Planning a family trip? Book our spacious options with optional professional drivers!</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card h-100 shadow-sm border-0 position-relative">
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-success px-3 py-2 z-1">Driver Included Option</span>
+                        <img src="caravan.jpg" class="card-img-top" alt="Luxury Caravan">
+                        <div class="card-body text-center mt-2">
+                            <h5 class="card-title fw-bold">Luxury Tourist Caravan</h5>
+                            <p class="card-text text-muted">Equipped with cozy bedding, mini-kitchen, and smart utilities. Premium camping experiences.</p>
+                            <h6 class="text-warning fw-bold mb-3">₹7,500 / day</h6>
+                            <button class="btn btn-dark w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="Luxury Tourist Caravan" data-price="₹7,500">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card h-100 shadow-sm border-0 position-relative">
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger px-3 py-2 z-1">15% Family Discount Applied</span>
+                        <img src="bus.jpg" class="card-img-top" alt="Family Tourer Bus">
+                        <div class="card-body text-center mt-2">
+                            <h5 class="card-title fw-bold">18-Seater Luxury Bus</h5>
+                            <p class="card-text text-muted">Fully air-conditioned, reclining seats. Certified professional driver provided by us.</p>
+                            <h6 class="text-warning fw-bold mb-3"><del class="text-muted fs-6 me-2">₹14,000</del> ₹11,900 / day</h6>
+                            <button class="btn btn-dark w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#rentalModal" data-vehicle="18-Seater Luxury Bus" data-price="₹11,900">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="rentalModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header bg-dark text-white p-4">
-                    <h5 class="modal-title fw-bold fs-4" id="transactionModalLabel">Confirm Rental Selection</h5>
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">Rental Requirements</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <div class="alert alert-warning border-0 d-flex flex-column gap-1 mb-4 shadow-sm">
-                        <span class="text-muted small uppercase fw-bold tracking-wider">Selected Model Specification</span>
-                        <strong id="modalVehicleName" class="fs-4 text-dark">Vehicle Name</strong>
-                        <span class="text-dark fw-semibold fs-5 mt-1">Base Cost Rate: <span id="modalVehicleCost" class="text-success fw-bold">₹0</span></span>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <h4 id="modalVehicleName" class="fw-bold text-dark mb-1">Vehicle Name</h4>
+                        <span id="modalVehiclePrice" class="badge bg-warning text-dark fs-6 fw-bold">Price</span>
                     </div>
-                    <form id="rentalValidationForm" class="d-flex flex-column gap-3" onsubmit="executeValidation(event)">
-                        <div>
-                            <label class="form-label text-dark fw-semibold small">Full Legal Name</label>
-                            <input type="text" class="form-control form-control-lg border-2 shadow-sm fs-6" placeholder="Enter your full name" required>
-                        </div>
-                        <div>
-                            <label class="form-label text-dark fw-semibold small">Contact Number</label>
-                            <input type="tel" class="form-control form-control-lg border-2 shadow-sm fs-6" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
-                        </div>
-                        <div class="row g-2">
-                            <div class="col-6">
-                                <label class="form-label text-dark fw-semibold small">Pickup Date</label>
-                                <input type="date" class="form-control form-control-lg border-2 shadow-sm fs-6" required>
-                            </div>
-                            <div class="col-6">
-                                <label class="form-label text-dark fw-semibold small">Return Date</label>
-                                <input type="date" class="form-control form-control-lg border-2 shadow-sm fs-6" required>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-warning btn-lg fw-bold text-dark w-100 shadow mt-3 py-2 fs-5">Secure Order Placement</button>
-                    </form>
+                    <h6 class="fw-bold text-danger border-bottom pb-2">Important Terms & Conditions:</h6>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item ps-0"><strong>Age Limit:</strong> Driver must be 18 years or older.</li>
+                        <li class="list-group-item ps-0"><strong>Documentation:</strong> Original Valid Driving License is mandatory at pickup.</li>
+                        <li class="list-group-item ps-0"><strong>Security Deposit:</strong> A fully refundable deposit of ₹2,000 applies.</li>
+                    </ul>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="agreeTerms">
+                        <label class="form-check-label fw-semibold text-muted" for="agreeTerms">
+                            I confirm that I am 18+ and possess a valid driving license.
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning fw-bold px-4" id="proceedBtn" disabled>Proceed to Book</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-light py-4 mt-5 border-top border-warning border-3">
-        <div class="container text-center">
-            <p class="m-0 fw-semibold opacity-75">&copy; 2026 Drive&Ride Rental Solutions Pvt. Ltd. All Rights Reserved.</p>
-            <p class="small text-muted m-0 mt-1">Engineered utilizing custom architectural Bootstrap responsive layouts.</p>
-        </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="./bootstrap.bundle.min.js"></script>
-    
     <script>
-        let activeModalObject = null;
+        const rentalModal = document.getElementById('rentalModal');
+        const agreeTermsCheckbox = document.getElementById('agreeTerms');
+        const proceedBtn = document.getElementById('proceedBtn');
 
-        document.addEventListener("DOMContentLoaded", function() {
-            activeModalObject = new bootstrap.Modal(document.getElementById('transactionModal'));
+        rentalModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget; 
+            const vehicleName = button.getAttribute('data-vehicle');
+            const vehiclePrice = button.getAttribute('data-price');
+            document.getElementById('modalVehicleName').textContent = vehicleName;
+            document.getElementById('modalVehiclePrice').textContent = vehiclePrice + " / day";
+            agreeTermsCheckbox.checked = false;
+            proceedBtn.disabled = true;
         });
 
-        function triggerBooking(vehicleName, dayCost) {
-            document.getElementById('modalVehicleName').innerText = vehicleName;
-            document.getElementById('modalVehicleCost').innerText = dayCost + " / day";
-            if(activeModalObject) {
-                activeModalObject.show();
-            }
-        }
+        agreeTermsCheckbox.addEventListener('change', function() {
+            proceedBtn.disabled = !this.checked;
+        });
 
-        function executeValidation(event) {
-            event.preventDefault();
-            alert("Success! Your reservation request for the " + document.getElementById('modalVehicleName').innerText + " has been locked in securely. Our verification desk will connect within 15 minutes.");
-            if(activeModalObject) {
-                activeModalObject.hide();
+        proceedBtn.addEventListener('click', function() {
+            alert("Booking request submitted successfully!");
+        });
+
+        function toggleShowroom(targetId) {
+  
+        const showrooms = document.querySelectorAll('.multi-collapse');
+        showrooms.forEach(box => {
+            if (box.id !== targetId) {
+                const bsCollapse = bootstrap.Collapse.getInstance(box);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
             }
-            document.getElementById('rentalValidationForm').reset();
-        }
+        });
+    }
     </script>
 </body>
 </html>
